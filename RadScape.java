@@ -164,7 +164,7 @@ public class RadScape extends ApplicationAdapter {
 		                              //from serializations errors thrown by the worldDef file, and also
 		                              //provide finer control over world definition. once the game is
 		                              //mostly finalized, the world should be serialized to the serialized
-		                              //worldDef, and this code should be removed. Jesus this is so retarded haha.
+		                              //worldDef, and this code should be removed. 
 				//OPENING MENU STUFF
 
 				if(windowMode == 'm'){
@@ -520,7 +520,6 @@ public class RadScape extends ApplicationAdapter {
 	        	for(int q = 0; q < hudCards.size(); q++){
 	        		hudCards.get(q).update();
 		        	for(int i = 0; i < hudCards.get(q).cardEntities.length; i++){
-		        		//this draws the shit
 		        		if(q==active){
 		        			hudCards.get(active).cardEntities[i].aspect.getSprite().draw(batch);
 		        			font.draw(batch, hudCards.get(active).title, 724, 390);
@@ -534,7 +533,7 @@ public class RadScape extends ApplicationAdapter {
         
         //method for drawing the title screen of the main menu
         public void drawMenu(){
-        	//if the game is set to doing it's rad as fuck opening,
+        	//if the game is set to doing it's rad opening,
         	//slowly fade in the title image, title, and slowly
         	//fade out the mask covering the interface
         	if(opening){
@@ -612,7 +611,7 @@ public class RadScape extends ApplicationAdapter {
             viewport = new Rectangle(crop.x, crop.y, w, h);
         }
         
-        //checks if a given point si within the collision box
+        //checks if a given point is within the collision box
         //of a solid static and dynamic entity, if so, return true
         public boolean checkSolidGeneralPointCollision(int x, int y){
         	if(checkSolidStaticPointCollision(x,y)||checkSolidDynamicPointCollision(x,y)){
